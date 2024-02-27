@@ -34,33 +34,15 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+p {
+  font-size: 1.2rem;
+}
 
-#app {
+#root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
 
 button {
@@ -74,14 +56,55 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+#loginBtn {
+  border-radius: 7px;
+  background-color: #218621;
+  padding: 0.5em 1.2em;
+}
+#loginBtn:hover {
+  background-color: #43d443;
+}
+#logOutBtn {
+  margin-bottom: 2vh;
+  background: #ad0e0e;
+}
+#logOutBtn:hover {
+  background: #f93f3f;
+}
+#themeBtn {
+  position: fixed;
+  top: 93vh;
+  left: 1vw;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+#loginInput {
+  padding-left: 1em;
+  width: 20em;
+  height: 3em;
+}
+#userBox {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+#usersContainer {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.userCard {
+  padding: 1pc;
+  border-radius: 10%;
+  background-color: #11161b;
+}
+.userIcon {
+  font-size: 3em;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

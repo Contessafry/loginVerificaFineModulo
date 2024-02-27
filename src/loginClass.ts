@@ -1,7 +1,8 @@
 import { User } from "./Declaration";
+import { formattedData } from "./utility";
 
 export class LogInBusines {
-  loggedUser: User["name"] = "";
+  loggedUser: User["name"] = localStorage.getItem("loggedUser") || "";
   users: User[] | [] = JSON.parse(localStorage.getItem("users") || "[]");
 
   toggleSaveLoggedUser() {
@@ -19,11 +20,11 @@ export class LogInBusines {
     const userExist = this.users.find((user) => user.name === name);
     if (!!userExist) {
       (userExist.totalAccess = userExist.totalAccess + 1),
-        (userExist.latestAccess = new Date());
+        (userExist.latestAccess = formattedData());
     } else {
       const newUser = {
         name,
-        latestAccess: new Date(),
+        latestAccess: formattedData(),
         totalAccess: 1,
       };
       this.users = [...this.users, newUser];
