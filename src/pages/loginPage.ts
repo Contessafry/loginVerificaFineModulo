@@ -7,7 +7,7 @@ function setThemeLogin() {
     const theme = setTheme();
     themeBtn.innerHTML = theme ? "🌕" : "☀";
     themeBtn.style.backgroundColor = theme ? "#535bf2" : "#11161b";
-    document.getElementById("loginI nput")!.style.backgroundColor = theme
+    document.getElementById("loginInput")!.style.backgroundColor = theme
       ? "white"
       : "#11161b";
   });
@@ -34,7 +34,7 @@ function onLogin() {
   }
 }
 function loginPage() {
-  const htmlLogIn = `<button id=themeBtn>${setTheme() ? "🌕" : "☀"}</button>
+  const htmlLogIn = `<button id=themeBtn>☀</button>
   <div id="loginBox">
     <input placeholder="...Username" type="text" id="loginInput"/>
     <button id="loginBtn">Login</button>

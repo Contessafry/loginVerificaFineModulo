@@ -19,7 +19,7 @@ export function formattedData() {
   // Combina i componenti in una stringa formattata
   return `${giorno}/${mese} ${ore}:${minuti}`;
 }
-let theme = true;
+let theme = false;
 export function setTheme() {
   theme = !theme;
   console.log(theme);
@@ -27,5 +27,6 @@ export function setTheme() {
     ? "#ffff"
     : "#242424";
   document.body.style.backgroundColor = theme ? "#ffffff" : "#242424";
+  document.getElementById("themeBtn")!.innerHTML = theme ? "🌕" : "☀";
   return theme;
 }

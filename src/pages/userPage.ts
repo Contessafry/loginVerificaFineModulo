@@ -37,7 +37,7 @@ function showUserCard() {
     .join("");
 }
 function userPage() {
-  const htmlUsers = `  <button id=themeBtn>${setTheme() ? "🌕" : "☀"}</button>
+  const htmlUsers = `  <button id=themeBtn>☀</button>
   <div id= "usersBox">
 
   <button id="logOutBtn">LogOut</button>
